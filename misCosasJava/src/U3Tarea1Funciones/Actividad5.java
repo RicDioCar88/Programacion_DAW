@@ -11,8 +11,10 @@ public class Actividad5 {
 			}else {
 				System.out.println(n3 + " Es el mayor");
 			}
-		}else {
+		}else if(n2>n3) {
 			System.out.println(n2 + " Es mayor");
+		}else {
+			System.out.println(n3+" Es el mayor");
 		}
 	}
 	

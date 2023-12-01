@@ -1,6 +1,6 @@
 package U3Tarea1Funciones;
 
-import java.util.Arrays;
+
 
 public class Actividad9 {
 
@@ -24,16 +24,19 @@ public class Actividad9 {
 	public static int[] divisoresPrimos(int num) {
 		int size=0;
 		
-		for(int i=0;i<num;i++) {
+		for(int i=2;i<num;i++) {
 			if(num%i==0 && esPrimo(i)) {
 				size++;
 			}
 		}
 		
 		int[] div=new int[size];
-		int i=0;
-		for(int j=1;j<=num;j++) {
-			
+		int j=0;
+		for(int i=2;i<=num;i++) {
+			if(num%i==0 && esPrimo(i)) {
+				div[j]=i;
+				j++;
+			}
 		}
 		
 		
@@ -44,7 +47,9 @@ public class Actividad9 {
 		// Implementar la función divisoresPrimos() que muestra, por consola, todos los divisores primos 
 		// del número que se le pasa como parámetro
 		int[] divisoresFin=divisoresPrimos(10);
-		System.out.println(Arrays.toString(divisoresFin));
+		for(int i=0;i<divisoresFin.length;i++) {
+			System.out.print(divisoresFin[i]+",");
+		}
 
 	}
 
